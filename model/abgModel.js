@@ -16,36 +16,6 @@ class fashion {
     }
   }
 
-  /*   addStaff(fullname, email, password) {
-    const that = this;
-    bcrypt.hash(password, saltRounds).then(function (hash) {
-      let staff = {
-      fullname: fullname,
-      email: email,
-      password: password,
-    };
-      that.db.insert(staff, function (err, doc) {
-        if (err) {
-          console.log("Can't insert user: ", fullname);
-        } else {
-          console.log("User", fullname, "inserted", doc);
-        }
-      });
-    });
-  }
-  lookup(fullname, cb) {
-    this.db.find({ fullname: fullname }, function (err, entries) {
-      if (err) {
-        return cb(null, null);
-      } else {
-        if (entries.length == 0) {
-          return cb(null, null);
-        }
-        return cb(null, entries[0]);
-      }
-    });
-  } */
-
   addStaff(fullname, email, password) {
     const that = this;
     bcrypt.hash(password, saltRounds).then(function (hash) {
@@ -87,15 +57,6 @@ class fashion {
       }
     });
   }
-
-  /* console.log("Entry created", staff);
-    this.db.insert(staff, function (err, doc) {
-      if (err) {
-        console.log("Error inserting document", fullname);
-      } else {
-        console.log("Document inserted into the database", doc);
-      }
-    }); */
 
   mgmtaddStaff(fullname, email) {
     let staff = {
