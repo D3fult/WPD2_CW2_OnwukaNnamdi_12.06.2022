@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | AGB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    section {
+        background-image: url("../images/milad-fakurian.jpg");
+        background-size: cover;
+    }
+</style>
+</head>
+
+<body class="bg-gray-900 font-roboto">
+    <section class="bg-gray-900 body-font bg-opacity-70 h-full lg:h-screen">
+        <header class="text-gray-300 bg-transparent body-font">
+            <div class="container mx-auto flex flex-wrap pt-10 pr-5 pb-5 pl-5 flex-col md:flex-row items-center">
+                <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                    <a href="../unreg_index.html"><img src="/images/logo-white.png" alt="AGB LOGO"
+                            class="w-48 h-auto"></a>
+                </a>
+                <nav
+                    class="mt-5 md:mr-auto md:ml-4 md:py-4 md:pl-4 md:border-l md:border-gray-400 text-white flex flex-wrap items-center text-sm justify-center font-medium">
+                    <a href="../html/signin.html"
+                        class="mr-5 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">SIGN
+                        IN</a>
+                    <a href="./unreg_about.html"
+                        class="mr-5 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">ABOUT US</a>
+            </div>
+        </header>
+        <div class="container px-5 py-0 lg:py-20 mx-auto flex flex-wrap items-center">
+            <form action="/unreg_signup" method="POST"
+                class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-80 rounded-lg p-8 flex flex-col md:mr-auto w-full mt-10 md:mt-0">
+                <h2 class="text-white text-2xl font-semibold title-font mb-5">Sign Up</h2>
+                <fieldset>
+                    <div class="relative mb-4">
+                        <label for="full-name" class="leading-7 text-sm text-gray-400">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="password" class="leading-7 text-sm text-gray-400">Password</label>
+                        <input type="password" id="password" name="password" minlength="8" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </fieldset>
+                <button type="submit"
+                    class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg transition ease-in-out duration-500">Sign
+                    Up
+                </button>
+                <p class="text-xs mt-3 text-white">Already a member?
+                    <a href="/html/signin.html"
+                        class="underline hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">Sign
+                        In
+                    </a>
+                </p>
+            </form>
+
+            <div class="lg:w-3/5 md:w-1/2 py-10 lg:py-0 md:pl-16 lg:pr-0 pr-0">
+                <h2 class="mb-3 title-font font-bold text-4xl text-green-500">Sign up now!</h2>
+                <h1 class="title-font font-bold text-4xl lg:text-5xl text-white">What are you waiting for?</h1>
+                <h3 class="leading-relaxed mt-4 title-font font-semibold text-xl text-white">Register and upgrade your
+                    experience.</h3>
+                <span style="display: flex;" class="mt-4"><img src="../images/check_mark.svg" alt="Check mark"
+                        width="35" height="35" class="text-white">
+                    <p class="leading-10 text-white text-sm lg:text-base">View the details of the wellness program.</p>
+                </span>
+                <span style="display: flex;"><img src="../images/check_mark.svg" alt="Check mark" width="35" height="35"
+                        class="text-white">
+                    <p class="leading-10 text-white text-sm lg:text-base">Define goals and achievements schedule on a
+                        weekly basis.</p>
+                </span>
+                <span style="display: flex;"><img src="../images/check_mark.svg" alt="Check mark" width="35" height="35"
+                        class="text-white">
+                    <p class="leading-10 text-white text-sm lg:text-base">Add, remove, modify, and define goals several
+                        weeks ahead.</p>
+                </span>
+                <span style="display: flex;"><img src="../images/check_mark.svg" alt="Check mark" width="35" height="35"
+                        class="text-white">
+                    <p class="leading-10 text-white text-sm lg:text-base">Record goal achievements at the time they
+                        occur.</p>
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

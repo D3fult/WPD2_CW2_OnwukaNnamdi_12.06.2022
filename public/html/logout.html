@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign out | AGB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    dark: "#19416b",
+                    regular: "#317cba",
+                    light: "#73ccd8",
+                }
+            }
+        }
+    }
+</script>
+</head>
+
+<body class="bg-gray-900 h-screen">
+    <section class="text-gray-400 bg-gray-900 body-font bg-opacity-70 h-full">
+        <header class="text-gray-300 bg-transparent body-font">
+            <div class="container mx-auto flex flex-wrap pt-10 pr-5 pb-5 pl-5 flex-col md:flex-row items-center">
+                <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                    <a href="../unreg_index.html"><img src="/images/logo-white.png" alt="AGB LOGO"
+                            class="w-48 h-auto"></a>
+                </a>
+            </div>
+        </header>
+        <div class="container px-5 py-24 mx-auto flex flex-col items-center">
+            <div class="lg:w-3/5 md:w-1/2 md:pl-16 lg:pr-0 pr-0">
+                <h2 class="mb-3 title-font font-bold text-4xl text-green-500">Successfully logged out.</h2>
+                <h1 class="title-font font-bold text-5xl text-white">Hope to see you soon!</h1>
+                <h2 class="mt-3 title-font font-bold text-4xl text-green-500">Have a wonderful day👋🏽</h2>
+            </div>
+            <a href="../html/signin.html" class="lg:w-3/5 md:w-1/2 md:pl-16 lg:pr-0 pr-0 mt-4 animate-pulse">
+                <button
+                    class="inline-flex text-white border-0 py-2 px-6 focus:outline-none bg-green-500 hover:bg-green-600 rounded text-lg transition ease-in-out duration-500">SIGN
+                    IN AGAIN
+                </button>
+            </a>
+        </div>
+
+        <footer class="mt-44 text-white bg-gradient-to-r from-dark via-regular to-light body-font">
+            <!-- <div class="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
+                <a class="flex title-font items-center md:justify-start justify-center">
+                    <span class="text-sm sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">©
+                        2022 AGB LTD. CORPORATION</span>
+                </a>
+                <nav class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white sm:py-2 sm:mt-0 mt-4">
+                    <a href="../html/index.html"
+                        class="mr-5 hover:text-white transition ease-in-out duration-500 cursor-pointer">HOME</a>
+                    <a href="../html/about.html"
+                        class="mr-5 hover:text-white transition ease-in-out duration-500 cursor-pointer">ABOUT
+                        US</a>
+                    <a href="../html/wellness.html"
+                        class="mr-5 hover:text-white transition ease-in-out duration-500 cursor-pointer">WELLNESS
+                        PROGRAM</a>
+                </nav> -->
+
+            <!-- <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                        <a href="www.facebook.com" class="text-white">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="www.twitter.com" class="ml-3 text-white">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="www.instagram.com" class="ml-3 text-white">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a href="www.linkedin.com" class="ml-3 text-white">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a>
+                    </span> -->
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

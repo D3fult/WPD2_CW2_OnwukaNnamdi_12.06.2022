@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>head}}
+</head>
+
+<body class="bg-gray-900">
+    {{>header}}
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+                <table class="table-auto w-full text-left whitespace-no-wrap">
+                    <thead>
+                        <tr>
+                            <th
+                                class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm rounded-tl rounded-bl">
+                                Staff ID</th>
+                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm">
+                                Staff Name
+                            </th>
+                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm">
+                                Email</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700">
+                    {{#users}}
+                        <tr>
+                            <td class="px-4 py-3 bg-gray-800">{{_id}}</td>
+                            <td class="px-4 py-3 bg-gray-800">{{fullname}}</td>
+                            <td class="px-4 py-3 bg-gray-800">{{email}}</td>
+                        </tr>
+                    {{/users}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

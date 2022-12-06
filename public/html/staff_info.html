@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Info | Managers @ AGB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900">
+    <header class="text-gray-300 bg-transparent body-font">
+        <div class="container mx-auto flex flex-wrap pt-10 pr-5 pb-5 pl-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <a href="../html/mgmt_index.html"><img src="/images/logo-white.png" alt="AGB LOGO"
+                        class="w-48 h-auto"></a>
+            </a>
+            <nav
+                class="mt-5 md:mr-auto md:ml-4 md:py-4 md:pl-4 md:border-l md:border-gray-400 text-white flex flex-wrap items-center text-sm justify-center font-medium">
+                <a href="../html/signup.html"
+                    class="mr-5 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">SIGN
+                    UP</a>
+                <a href="../html/about.html"
+                    class="mr-5 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">ABOUT
+                    US</a>
+                <a href="../html/wellness.html"
+                    class="mr-5 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">WELLNESS
+                    PROGRAM</a>
+            </nav>
+            <!-- <button
+                class="inline-flex items-center text-white bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">STAFF
+                INFO
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button> -->
+        </div>
+    </header>
+    <section class="flex flex-row text-gray-400 bg-gray-900 body-font bg-opacity-70 h-full">
+        <div class="container px-5 py-0 lg:py-20 mx-auto flex flex-wrap items-center">
+            <form action="/addStaff" method="POST"
+                class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full mt-10 md:mt-0">
+                <h2 class="text-white text-2xl font-semibold title-font mb-5">Add Staff</h2>
+                <fieldset>
+                    <div class="relative mb-4">
+                        <label for="full-name" class="leading-7 text-sm text-gray-400">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </fieldset>
+                <button
+                    class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg transition ease-in-out duration-500">Add</button>
+            </form>
+
+            <form action="/updateStaff" method="POST"
+                class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full mt-10 md:mt-0">
+                <h2 class="text-white text-2xl font-semibold title-font mb-5">Update Staff</h2>
+                <fieldset>
+                    <div class="relative mb-4">
+                        <label for="full-name" class="leading-7 text-sm text-gray-400">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </fieldset>
+                <button
+                    class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg transition ease-in-out duration-500">Update</button>
+            </form>
+
+            <form action="/deleteStaff" method="POST"
+                class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col md:mx-auto w-full mt-10 md:mt-0">
+                <h2 class="text-white text-2xl font-semibold title-font mb-5">Delete Staff</h2>
+                <fieldset>
+                    <div class="relative mb-4">
+                        <label for="full-name" class="leading-7 text-sm text-gray-400">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </fieldset>
+                <button
+                    class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg transition ease-in-out duration-500">Delete</button>
+            </form>
+        </div>
+    </section>
+    <form action="/viewStaff" method="GET">
+        <button
+            class="container mx-auto flex flex-row justify-center text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg transition ease-in-out duration-500 animate-pulse">View
+            all staff
+        </button>
+    </form>
+</body>
+
+</html>
