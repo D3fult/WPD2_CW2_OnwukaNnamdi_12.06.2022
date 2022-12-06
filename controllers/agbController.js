@@ -3,8 +3,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const fashionDAO = require("../model/abgModel");
 
-// const userDAO = require("../model/userModel");
-
 // Instance of fashionDAO class
 const db = new fashionDAO("database/newStaff.db");
 
@@ -17,19 +15,6 @@ exports.about_page = function (req, res) {
   res.redirect("/html/about.html");
 };
 
-/* exports.register = function (req, res) {
-  res.redirect("/html/signup.html");
-};
-
-exports.post_register = function (req, res) {
-  if (!req.body.email) {
-    response.status(400).send("Entries must have an email address.");
-    return;
-  }
-  db.addStaff(req.body.fullname, req.body.email, req.body.password);
-  res.redirect("/");
-}; */
-
 exports.login = function (req, res) {
   res.redirect("/html/signin.html");
 };
@@ -39,7 +24,6 @@ exports.post_login = function (req, res) {
     response.status(400).send("Entries must have an email address.");
     return;
   }
-  // db.addStaff(req.body.fullname, req.body.email, req.body.password);
   res.redirect("/");
 };
 
@@ -79,31 +63,7 @@ exports.alt_post_register = function (req, res) {
     console.log("New user", user, "signed in!");
     res.redirect("/html/signin.html");
   });
-  /* db.addStaff(req.body.fullname, req.body.email, req.body.password);
-  res.redirect("/"); */
 };
-
-/* exports.alt_post_register = function (req, res) {
-  const user = req.body.fullname;
-  const email = req.body.email;
-  const password = req.body.password;
-
-  if (!user || !email || !password) {
-    res.send(401, "no user or no email or no password");
-    return;
-  }
-
-  db.lookup(user, function (err, u) {
-    if (u) {
-      res.send(401, "User exists:", user);
-      return;
-    }
-
-    db.create(user, email, password);
-    console.log("register user", user, "email", email, "password", password);
-    res.redirect("../html/index.html");
-  });
-}; */
 
 // ------------------------------------- Manager user interface -------------------------------------
 exports.manager_view = function (req, res) {
@@ -222,7 +182,6 @@ exports.signin = function (req, res, next) {
           expiresIn: 300,
         });
         res.cookie("jwt", accessToken);
-        // next();
         res.redirect("/");
       } else {
         return res.redirect("/signin"); //res.status(403).send();
